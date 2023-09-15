@@ -8,7 +8,7 @@ def balance(money):
 def payment(money):  # пополнение баланса
 
      deposit = int(input("Введите число кратное 50, чтобы пополнить счет: "))
-    while  deposit % 50 != 0:
+    while  payment % 50 != 0:
          deposit = int(input("Вы ошиблись, введите число кратное 50 : "))
     return  deposit
 
