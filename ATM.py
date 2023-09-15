@@ -7,26 +7,26 @@ def balance(money):
 
 def payment(money):  # пополнение баланса
 
-    payment = int(input("Введите число кратное 50, чтобы пополнить счет: "))
-    while payment % 50 != 0:
-        payment = int(input("Вы ошиблись, введите число кратное 50 : "))
-    return payment
+     deposit = int(input("Введите число кратное 50, чтобы пополнить счет: "))
+    while  deposit % 50 != 0:
+         deposit = int(input("Вы ошиблись, введите число кратное 50 : "))
+    return  deposit
 
 
 def withdraw_money(money):  # снятие средств
 
     comission = 0.015
-    payment = int(input("Введите число кратное 50, чтобы снять деньги со счета: "))
-    while payment % 50 != 0:
-        payment = int(input("Вы ошиблись, введите число кратное 50 : "))
-    if payment * comission < 30:
+     deposit = int(input("Введите число кратное 50, чтобы снять деньги со счета: "))
+    while  deposit % 50 != 0:
+         deposit = int(input("Вы ошиблись, введите число кратное 50 : "))
+    if  deposit * comission < 30:
         total_com = 30
-    elif payment * comission > 600:
+    elif  deposit * comission > 600:
         total_com = 600
     else:
-        total_com = payment * comission
-    print(f"Вы сняли с вашего счета {payment} + комиссия {total_com}")
-    return payment + total_com
+        total_com =  deposit * comission
+    print(f"Вы сняли с вашего счета { deposit} + комиссия {total_com}")
+    return  deposit + total_com
 
 
 balans_lst = []  # все балансы
@@ -38,7 +38,7 @@ while action != 4:
     action = int(
         input("Введите цифру 1 - Пополнить, 2 - Снять, 3 - вывести список всех предыдущих балансов, 4 - выйти : "))
     if action == 1:
-        money = payment(money) + money
+        money =  deposit(money) + money
     balance(money)
     money = (money)
     if action == 4:
